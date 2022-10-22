@@ -6,12 +6,14 @@ for (초기화부분; 조건부분; 추가동작부분) {
 }
 
 // ex 1)
+// 1 이상 100 이하의 짝수를 모두 출력
 for (let i = 2; i <= 100; i += 2) {
   console.log (i);
 }
 
 
 // ex 2)
+// 주어진 높이에 맞게 '*'로 삼각형을 그려주는 함수
 function printTriangle(height) {
 	for (let i = 1; i <= height; i++) {
 	  console.log ('*'.repeat(i));
