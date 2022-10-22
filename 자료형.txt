@@ -1,0 +1,64 @@
+
+자료형 (숫자형, 문자열, 불린형)
+
+[ 숫자형 ]
+
+!! 사칙연산 순서
+
+- 괄호 안에 있는 부분 먼저
+  () > {} > []
+
+- *, / 먼저
+- +, - 마지막으로
+  (같은 순위에 있으니 왼쪽 > 오른쪽)
+
+- 순서대로 앞에서 부터
+
+
+** : 제곱
+% : 나머지 계산
+
+
+
+[ 문자열 ]
+
+''
+""
+`` = 백틱 (권장)
+
+작은따옴표와 큰따옴표가 모두 있을 때, 역슬래시 사용 가능
+ex) \" \'
+
+
+
+[ 불린형 ]
+
+불대수의 값, 진리값 (true or false)
+
+- && : AND 연산
+x와 y가 모두 참일 때만 x AND y가 참
+
+  true  true = true
+  true  false = false
+  false  true = false
+  false  false = false
+
+- || : OR 연산
+x와 y 중 하나라도 참이면 x OR y는 참
+
+  true  true = true
+  true  false = true
+  false  true = true
+  false  false = false
+
+- ! : NOT 연산 (반대로 뒤집어 주는 역할)
+    x     NOTx
+  true  > false
+  false > true
+
+
+==
+=== (엄격모드)
+
+!
+!! (반대의 반대)
