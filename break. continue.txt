@@ -1,0 +1,32 @@
+
+break문
+: break; (종료)
+
+break를 반복문 (+ swith) 에서 활용하면
+반복문에 조건 부분과 상관없이
+반복이 실행되는 도중에 빠져나갈 수 있다.
+
+
+
+continue문
+: continue; (동작 부분을 한번 건너뜀)
+
+// ex)
+for (let i = 1; i <= 10; i++) {
+  if (i % 2 === 0) {
+    continue;
+  }
+  console.log(i);
+}
+
+이렇게 console.log 전에 continue 가 진행되면
+console.log도 넘어가서
+
+짝수는 무시되고, 홀수일 때만 console.log 실행
+
+따라서,
+1
+3
+5
+7
+9 만 출력됨
