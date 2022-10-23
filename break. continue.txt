@@ -22,7 +22,7 @@ for (let i = 1; i <= 10; i++) {
 이렇게 console.log 전에 continue 가 진행되면
 console.log도 넘어가서
 
-짝수는 무시되고, 홀수일 때만 console.log 실행
+짝수는 무시되고, 홀수일 때만 console.log (i)만 실행
 
 따라서,
 1
@@ -30,3 +30,29 @@ console.log도 넘어가서
 5
 7
 9 만 출력됨
+
+
++) while도 마찬가지
+
+let i = 1;
+
+while (i <= 10) {
+  if (i % 2 ===0) {
+    i++;
+    continue;
+  }
+  console.log (i);
+  i++;
+}
+
+
+while문은 for문과 다르게
+추가 동작 부분이 없어서
+
+continue가 실행되서 동작 부분을 건너뛰게 되면
+
+바로 while (조건 부분)으로 넘어가게 되서
+continue; 전에 i를 증가시켜줬음
+
+/* 만약 저기에 i++;을 쓰지 않으면
+i가 2인 채로 무한히 반복하는 코드가 됨*/
