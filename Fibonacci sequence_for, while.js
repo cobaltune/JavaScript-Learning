@@ -18,6 +18,24 @@ for (let i = 1; i <= 50; i++) {
   now = now + empty;
 }
 
+// JY bro *tip
+let now = 1;
+let pre = 0;
+let empty;
+
+/* let empty를 반복문으로 돌리는 것 보다
+   밖에서 let empty선언하고
+   반복문 안에서는 empty = pre만 */
+
+for (let i = 1; i<=50; i++) {
+  console.log (now);
+   
+  empty = pre;
+  pre = now;
+  now = now + empty;
+}
+
+
 /* 코드 해석
 1  -> console.log (now); 위에 변수 선언할 때 준 1을 콘솔
 1  -> 0 이었던 pre에 now를 할당해서
