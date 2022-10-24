@@ -31,8 +31,30 @@ console.log('높이: 5');
 printTriangle(5);
 
 
+  /* .repeat 메소드
+  
+  : string.repeat (count);
+  : 문자열을 반복한 값을 반환하는 메소드
 
-/*
+  *매개변수 count
+  : 문자열을 반복할 횟수. 0과 양의 무한대 사이의 정수 */
+
+  // ex 1)
+  'abc'.repeat(-1);   // RangeError
+  'abc'.repeat(0);    // ''
+  'abc'.repeat(1);    // 'abc'
+  'abc'.repeat(2);    // 'abcabc'
+
+  // ex 2)
+  var str = "Hi";
+
+  console.log(str.repeat(0));
+  console.log(str.repeat(1));
+  console.log(str.repeat(2));
+  console.log(str.repeat(3));
+
+
+  /*
 1. 추가동작부분을 꼭 채울 필요는 없다.
   for (let i = 1; i <= 10;) {
     console.log(`${i} 코드잇 최고!`);
