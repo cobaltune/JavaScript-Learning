@@ -52,7 +52,24 @@ empty라는 변수에 b를 저장
 이렇게 50번 반복 */
 
 
-// siwan answer edit.ver
+// present_siwan answer
+let previous = 0;
+let current = 1;
+​
+for (let i = 1; i < 50; i++) {
+  console.log(current);
+
+  let past = previous;
+
+  previous = current;
+  current = current + past;
+}
+
+/* my Q : for 조건 부분에서 < 만 해줘두 돼 ??
+siwan A : 12586269025 가 정답이면 <만
+          20365011074 가 정답이면 <= */
+
+// past_siwan answer edit.ver
 let a = 1;
 console.log (a);
 
