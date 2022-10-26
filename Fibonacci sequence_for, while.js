@@ -52,7 +52,60 @@ empty라는 변수에 b를 저장
 이렇게 50번 반복 */
 
 
-// present_siwan answer
+// answer sheet (for)
+let current = 1;
+let previous = 0;
+
+for (let i = 1; i <= 50; i++) {
+  console.log(current);
+  let temp = previous;
+  previous = current;
+  current = current + temp;
+}
+
+// answer sheet (while)
+let current = 1;
+let previous = 0;
+let i = 1;
+
+while (i <= 50) {
+  console.log(current);
+  let temp = previous;  // previous를 임시 보관소 temp에 저장
+  previous = current;
+  current = current + temp;  // temp에는 기존 previous 값이 저장돼 있음
+  i++;
+}
+
+
+// present_siwan answer 2
+let previous = 0;
+let current = 0;
+​
+for (let i = 0; i < 49; i++) {
+  //첫번째 시도 예외처리
+  if (i === 0) {
+    current = 1;
+    console.log(current);
+    previous = current;
+  } else {
+    console.log(current);
+    let past = previous;
+    previous = current;
+    current += past;
+  }
+}
+
+/*
+현재와 과거는 아무것도 없는 0 이다.
+첫번째 시도만 현재(current)에 1을 할당 한다.
+현재(current)는 이전(previous)이 되고 다음 차례로 넘어간다.
+else문 안에서 이전(previous)는 과거(past)가 된다.
+그 다음 오래된 현재(current)는 이전(previous)이 되고,
+마지막으로 가장 최근의 현재(current)는
+현재(current)와 과거(past)를 합쳐서 할당 한다.
+*/
+
+// present_siwan answer 1
 let previous = 0;
 let current = 1;
 ​
@@ -88,28 +141,4 @@ function fibonacci (i) {
 
 for (let i = 1; i <= 47; i++) {
   fibonacci (i);
-}
-
-// answer sheet (for)
-let current = 1;
-let previous = 0;
-
-for (let i = 1; i <= 50; i++) {
-  console.log(current);
-  let temp = previous;
-  previous = current;
-  current = current + temp;
-}
-
-// answer sheet (while)
-let current = 1;
-let previous = 0;
-let i = 1;
-
-while (i <= 50) {
-  console.log(current);
-  let temp = previous;  // previous를 임시 보관소 temp에 저장
-  previous = current;
-  current = current + temp;  // temp에는 기존 previous 값이 저장돼 있음
-  i++;
 }
