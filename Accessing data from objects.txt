@@ -5,7 +5,7 @@
 
 
 let codeit = {
-  nameL '코드잇',
+  name: '코드잇',
   bornYear: 2017,
   isVeryNice: true,
   worstCourse: null,
