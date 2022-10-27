@@ -1,0 +1,84 @@
+
+// 객체의 프로퍼티를 수정하고, 추가하고, 삭제하는 방법
+
+: 해당 프로퍼티에 접근해서 새로운 값을 할당
+  (마치 변수의 값을 재할당하는 모습)
+
+
+let codeit = {
+  nameL '코드잇',
+  bornYear: 2017,
+  isVeryNice: true,
+  worstCourse: null,
+  bestCourse: {
+    title: '자바스크립트 프로그래밍 기초',
+    language: 'JavaScrip'
+  }
+};
+
+// 수정
+console.log (codeit.name);
+codeit.name = 'codeit';
+console.log (codeit.name);
+
+
+/* 존재하지 않는 프로퍼티에 접근하려고 할 시
+: 에러가 나는 것이 아니라 undefined 값이 출력
+
+but
+
+존재하지 않는 이 프로퍼티에 새로운 값을 할당해주면
+새로운 프로퍼티가 추가 */
+
+// 추가
+console.log (codeit.ceo);  //undefined 출력
+codeit.ceo = '강영훈';
+console.log (codeit.ceo);  //강영훈 출력
+
+
+// 삭제
+: delete 연산자
+
+console.log (codeit.worstCourse);   //null 출력
+delete codeit.worstCourse;
+console.log (codeit.worstCourse);  //undefined 출력
+
+
+/* 존재하지 않는 프로퍼티 값은 undefined
+그래서 프로퍼티 값과 undefined를 불일치 비교를 해서
+객체의 프로퍼티 존재 여부를 확인 */
+
+ex 1)
+console.log (codeit.name !== undefined);
+
+ex 2)
+console.log ('name' in codeit);
+
+// in 연산자
+: 'propertyName' in object
+
+객체 안에 이런 이름을 가진 프로퍼티가 있는지를 확인해서
+불린 형태로 값을 리턴
+
+
++) undefined로 비교하면 되는데, 굳이 왜 in 연산자를 사용하는 이유
+
+- 더 짧아서 이해하기가 쉽고
+- 프로퍼티를 확인할 때 좀 더 안전하게 하기 위함
+
+
+/* worstCourse의 값을 실수로 undefined로 할당했다고 가정
+이렇게 되면 worstCourse가 프로퍼티로 존재하고 있지만
+undefined와 비교했을 때 false가 나옴 */
+
+console.log (codeit.worstCourse !== undefined);  // false 출력
+console.log ('worstCourse' in codeit);   // true 출력
+
+
++) in 연산자 = 불린값을 리턴하니까 if문에서 조건 부분에 활용하기 좋음
+
+if ('name' in codeit) {
+  console.log (`name 값은 ${codeit.name}입니다.`};
+} else {
+  console.log ('name 프로퍼티는 존재하지 않습니다.'); 
+}
