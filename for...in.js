@@ -49,10 +49,20 @@ for (let k in codeit) {
 /* 프로퍼티 네임에는 숫자형(양수)을 작성해서 사용할 수도 있음
 다만 실제로 사용될 때는 문자열로 형 변환이 됨. */
 
+
 console.log (myObject['300']);
 
 /* 이렇게 예외적인 파라미터 네임은 접근할 때
 대괄호 표기법으로만 접근 가능 */
+
+// 예외적인 파라미터 네임
+//ex 1)
+'chanho-park' // hyphen 이 들어간 프로퍼티 네임
+console.log (myObject['chanho-park']);
+
+// ex 2)
+'chanho park' // 공백이 있는 문자열
+console.log (myObject['chanho park']);
 
 
 // 정수형 프로퍼티 네임
