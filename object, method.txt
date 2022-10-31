@@ -10,6 +10,16 @@
 
   이런 함수를 객체의 메소드라고 부름
 
+
+객체 = {
+  메소드 이름: 함수() {
+      // 콘텐츠
+  }
+};
+
+객체.메소드 이름()
+
+ex )
 let greetings = {
   sayHello: function () {
     console.log ('Hello!);
