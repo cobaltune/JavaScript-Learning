@@ -198,6 +198,23 @@ let date3 = new Date('Dec 15 1999 05:25:30');
 ISO8601의 한 버전의 형식을 준수하는 문자열로 Date객체를 생성하는 것을 권장 */
 
 
+* Date 앞에 new를 쓰는 이유
+: Date는 생성자 함수가 존재하는 내장 객체
 
-!!! Date 객체 Tip 강의 질문
-- Date 앞에 new를 쓰는 이유 이어서
+// 생성자 함수 Date
+1. Date() 함수로 호출할 경우
+   new Date().toString()과 동일하게
+   현재 날짜와 시간을 나타내는 문자열 반환
+
+2. new Date() 생성자로 호출할 경우
+   새로운 Date 객체를 반환
+
+
+// 출력값
+console.log(typeof Date(2020,01,01));  // 'string'   
+console.log(typeof new Date(2020, 01, 01));  // 'object'
+
+/* new 키워드가 없는 Date() 함수는 인수를 무시하며,
+현재 날짜 및 시간을 나타내는 문자열을 반환
+
+new 키워드를 사용한 new Date()는 Date 타입인 새로운 객체를 생성 */
