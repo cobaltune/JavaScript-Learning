@@ -48,7 +48,7 @@ new Date (YYYY, MM, DD, hh, mm, ss, ms);
 우리가 일반적으로 생각하는 1월 = 컴퓨터에게 0월
 
 
-// Date.getTime ()
+// Date.getTime()
 let myDate = new Date (2022, 11, 05, 01, 26, 16);
 
 console.log (myDate.getTime());
@@ -58,11 +58,11 @@ console.log (myDate.getTime());
   몇 밀리초가 지났는지 계산해줌
 
 
-// Date.getTime ()
+// Date.getTime()
 let myDate = new Date (2017, 04, 18, 19, 11, 16);
-let today = new Date ();
+let today = new Date();
 
-let timeDiff = myDate.getTime () - today.getTime ();
+let timeDiff = myDate.getTime() - today.getTime();
 
 console.log (timeDiff + '밀리초');
 console.log (timeDiff / 1000 + '초');
@@ -70,7 +70,7 @@ console.log (timeDiff / 1000 / 60 + '분');
 console.log (timeDiff / 1000 / 60 / 60 + '시간');
 
 
-// Date.getTime ()
+// Date.getTime()
 let myDate = new Date (2017, 04, 18, 19, 11, 16);
 
 console.log (myDate.getFullYear());
