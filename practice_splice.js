@@ -26,8 +26,12 @@ ages[3] = '28';
 numbers = 1, 2, 3, 5, 8, 9;
 
 // 반복문을 활용해서 numbers 배열의 요소들 중 홀수를 모두 삭제해 주세요.
-
-
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] % 2 !== 0) {
+    numbers.splice (i, 1);
+    i--;
+  }
+}
 
 // 테스트 코드
 console.log(fruits[1]);
