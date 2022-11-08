@@ -1,0 +1,93 @@
+
+splice (method)
+: splice메소드로 요소를 추가, 수정, 삭제할 수 있음
+
+
+### splice (startIndex, deleteCount)
+- 먼저 삭제를 시작할 인덱스를 첫 번째 파라미터로 넣어주고
+- 삭제할 개수를 입력
+
+** 만약 삭제할 개수를 전달하지 않으면
+시작한 인덱스 이후에 모든 요소들을 삭제
+
+
+// 요소의 삭제
+members.splice (4);
+console.log (members);
+
+// 출력값
+(4) ["쿤갈레", "zerrad66", "우리생각해써", "흙토끼"]
+
+members 다음에 점표기법으로 splice 메소드를 호출
+삭제하고 싶은 인덱스를 파라미터로 전달
+
+
+// 요소의 삭제
+members.splice (4);
+console.log (members);
+
+// 출력값
+(4) ["쿤갈레", "zerrad66", "우리생각해써", "흙토끼"]
+
+members 다음에 점표기법으로 splice 메소드를 호출
+삭제하고 싶은 인덱스를 파라미터로 전달
+
+1번 인덱스를 삭제하고 싶어서, 파라미터로 1을 전달해 주면
+1번 인덱스 이후에 모든 요소들이 삭제됨
+
+
+⇒ 이렇게 splice 메소드의 파라미터로 값을 하나만 전달하게 되면
+전달된 인덱스로부터 그 이후에 모든 요소를 삭제함
+
+그래서 splice 메소드의 두 번째 파라미터로 숫자 값을 하나 더 전달해 주면
+삭제할 개수를 조절할 수 있음
+
+ex )
+members.splice (1, 2);
+console.log (members);
+
+// 출력값
+(3) ["쿤갈레", "흙토끼", "End Miracle"]
+
+파라미터 두 번째 값으로 2를 전달해 주면
+1번 인덱스부터 요소 두 개가 삭제된 걸 확인할 수 있음
+
+
+한 개만 지우고 싶을 때는 두 번째 숫자 값을 1로 바꿔주면 됨
+
+ex )
+members.splice (1, 1);
+console.log (members);
+
+// 출력값
+(3) ["쿤갈레", "우리생각해써", "흙토끼", "End Miracle"]
+
+
+
+### splice (startIndex, deleteCount, item)
+splice 메소드로 요소를 삭제한 다음에 새로운 요소를 더 추가할 수 있음
+
+- 세 번째 파라미터에 값을 전달하게 되면
+- 삭제한 요소 자리에 그 값이 추가가 됨
+
+ex 1)
+members.splice (1, 1, 'NiceCodeit', 'Hicodeit');
+console.log (members);
+
+// 출력값
+(6) ["쿤갈레", "NiceCodeit", "Hicodeit", "우리생각해써", "흙토끼",
+"End Miracle"]
+
+ex 2)
+members.splice (1, 0, 'NiceCodeit', 'Hicodeit');
+console.log (members);
+
+// 출력값
+(7) ["쿤갈레", "NiceCodeit", "Hicodeit", "Zerrard66", "우리생각해써",
+"흙토끼", "End Miracle"]
+
+/* 아무것도 삭제되지 않고
+1번 인덱스에 ‘NiceCodeit’, ‘Hicodeit’ 추가된 걸 확인할 수 있음*/
+
+splice 메소드에서 삭제할 개수를 0으로 만들어주면
+첫 번째와 세 번째 이후의 파라미터로 배열 안에 어느곳이든 요소를 추가할 수 있음
