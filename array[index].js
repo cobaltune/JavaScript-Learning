@@ -4,6 +4,7 @@
 
 // 반복문의 개념 활용
 
+
 // my answer
 let dataType = [
   'number', 'string', 'boolean', 'null', 'undefined', 'object'];
@@ -11,6 +12,7 @@ let dataType = [
 for (let i = 0; i <= 5; i++) {
   console.log (dataType[i]);
 }
+
 
 // siwan *tip
 for (let i = 0; i < dataType.length; i++) {
