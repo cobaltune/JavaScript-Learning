@@ -37,7 +37,7 @@ NiceCodeit
   undefined 값이 들어간 요소가 자동으로 생성
 
 
-ex : 콘솔창에서 )
+// 콘솔창
 members
 (7) ["쿤갈레", "zerrad66", "우리생각해써", "흙토끼",
 "End Miracle", empty, "NiceCodeit"]
