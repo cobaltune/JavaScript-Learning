@@ -47,6 +47,28 @@ console.log(numbers[3]);
 console.log(numbers);
 
 
+/* 코드 해석
+** 인덱스 순번이 밀리는 걸 방지하기 위해 i--;
+
+0 번째 인덱스 = 1
+numbers   [0]   % 2 !== 0   = 0.5   i--
+
+    0 번째 인덱스 = 2
+numbers   [0]   % 2 !== 0   = 0   i++
+
+    1 번째 인덱스 = 3
+numbers   [1]   % 2 !== 0   = 1.5   i--
+
+    1 번째 인덱스 = 5
+numbers   [1]   % 2 !== 0   = 2.5   i--
+
+    1 번째 인덱스 = 8
+numbers   [1]   % 2 !== 0   = 4   i++
+
+    2 번째 인덱스 = 9
+numbers   [2]   % 2 !== 0   = 4.5   i-- */
+
+
 // past_siwan answer
 let fruits = ['레몬', '토마토', '딸기', '바나나'];
 let ages = [20, 24, 25, 29, 30, 33];
