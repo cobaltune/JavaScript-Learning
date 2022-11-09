@@ -23,14 +23,12 @@ members 다음에 점표기법으로 splice 메소드를 호출
 
 
 // 요소의 삭제
-members.splice (4);
+members.splice (1);
 console.log (members);
 
 // 출력값
 (4) ["쿤갈레", "zerrad66", "우리생각해써", "흙토끼"]
 
-members 다음에 점표기법으로 splice 메소드를 호출
-삭제하고 싶은 인덱스를 파라미터로 전달
 
 1번 인덱스를 삭제하고 싶어서, 파라미터로 1을 전달해 주면
 1번 인덱스 이후에 모든 요소들이 삭제됨
@@ -75,7 +73,7 @@ console.log (members);
 splice 메소드로 요소를 삭제한 다음에 새로운 요소를 더 추가할 수 있음
 
 - 세 번째 파라미터에 값을 전달하게 되면
-- 삭제한 요소 자리에 그 값이 추가가 됨
+- 삭제한 요소 자리에 그 값이 추가 됨
 
 ex 1)
 members.splice (1, 1, 'NiceCodeit', 'Hicodeit');
