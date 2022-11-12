@@ -45,7 +45,7 @@ console.log(indices.length);
 /* 참고 사이트
 [https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 
-+) 위에서 `구문`과 `요소의 모든 항목 찾기` 예제를 보면 더 이해하기 쉬움 */
++) 위에서 구문과 요소의 모든 항목 찾기 예제를 보면 더 이해하기 쉬움 */
 
 
 // while 문을 for 문으로
