@@ -1,8 +1,8 @@
 
-/* 배열 메소드 Tip > 질문 > 특정값이 몇개인지 알려주는 메소드는 없나요?
+/* 배열 메소드 Tip > 질문 > 특정 값이 몇 개인지 알려주는 메소드는 없나요?
 
 ## 알고자 하는 바
-- 몇개 있는지
+- 몇 개 있는지
 - 각각 몇 번째에 있는지
 
 ## 답변
@@ -40,7 +40,6 @@ console.log(indices.length);
 
 // 출력값
 [0, 2, 4]
-3
 
 
 /* 참고 사이트
@@ -49,8 +48,7 @@ console.log(indices.length);
 +) 위에서 `구문`과 `요소의 모든 항목 찾기` 예제를 보면 더 이해하기 쉬움 */
 
 
-// while문을 for문으로
-// 출력값 [0, 2, 4]
+// while 문을 for 문으로
 
 // siwan answer
 const result = [];
@@ -61,7 +59,7 @@ let now = list.indexOf(target);
 const max = list.length - 2;
 
 for (let i = 0; i < max; i++) {
-  const isFound = 0 <= now; //0이상 이면 찾은것임
+  const isFound = 0 <= now; //0 이상이면 찾은 것임
 
   if (isFound) {
     result.push(now);
