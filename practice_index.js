@@ -1,15 +1,10 @@
 // indexOf ()
 
 /* ### 배열 메소드 Tip > 질문
-예시에서 ‘Kakao’ 요소가 두 개 있었음
+> 특정 값이 몇 개인지 알려주는 메소드는 없나요?
 
-- array.indexOf ('element')
-  : 앞에서 몇 번째인지
-    
-- array.lastIndexOf ('element')
-  : 뒤에서 몇 번째인지
-   
-- 몇개 있는지
+### 알고자 하는 바
+- 몇 개 있는지
 - 각각 몇 번째에 있는지
 
 ### 답변
@@ -18,20 +13,6 @@ array.indexOf (’배열에서 찾을 요소’, [검색을 시작할 index]);
 
 이를 아래와 같이 응용하면
 특정 배열 내에 특정 요소가 몇 번 등장하며, 어디에 위치하는지 알 수 있음 */
-
-
-
-// while 문
-while (조건) {
-  동작;
- }
- 
-
- // for 문
- for (초기화; 조건; 추가동작) {
- 동작;
- }
-
 
 
 //array 배열에서 'a'가 존재하는 위치들을 저장할 배열
@@ -67,8 +48,90 @@ console.log(indices.length);
 3
 
 
-
 /* 참고 사이트
 [https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 
 +) 위에서 구문과 요소의 모든 항목 찾기 예제를 보면 더 이해하기 쉬움 */
+
+
+// while 문을 for 문으로
+
+
+// siwan answer
+const result = [];
+const list = ['a', 'b', 'a', 'c', 'a', 'd'];
+const target = 'a';
+
+let now = list.indexOf(target);
+const max = list.length - 2;
+
+for (let i = 0; i < max; i++) {
+  const isFound = 0 <= now; //0 이상이면 찾은 것임
+
+  if (isFound) {
+    result.push(now);
+  }
+  const problem = now + 1;
+  now = list.indexOf(target, problem);
+}
+
+console.log(result);
+
+
+// answer develop by siwan
+const list = ['a', 'b', 'a', 'c', 'a', 'd'];
+const result = [];
+
+list.forEach((item, index) => item === 'a' && result.push(index));
+console.log(result);
+
+
+// problem
+const result = [];
+const list = ['a', 'b', 'a', 'c', 'a', 'd'];
+const target = 'a';
+
+let now = list.indexOf(target);
+
+const max = list.length - 1;
+
+for (let i = 0; i < max; i++) {
+  const isFound = 0 <= now; //0 이상이면 찾은 것임
+  const isNotFound = now === -1;
+
+  if (isFound) {
+    result.push(now);
+  }
+
+  //어디까지 찾았는지 알려줄게. 그 찾은 위치를 now에 넣어줘
+  if (!isNotFound) {
+    const problem = now + 1;
+    now = list.indexOf(target, problem);
+  }
+}
+
+console.log (result);
+
+/* arr.indexOf (searchElement [ , fromIndex])
+
+### 매개변수
+- searchElement
+  : 배열에서 찾을 요소
+
+- fromIndex` (optional)
+  : 검색을 시작할 색인입니다.
+  
+  `인덱스가 배열의 길이보다 크거나 같은 경우 -1이 반환되므로
+  배열이 검색되지 않습니다.`
+
+  제공된 색인 값이 음수이면
+  배열 끝에서부터의 오프셋 값으로 사용됩니다.
+
+참고
+: 제공된 색인이 음수이면 배열은 여전히 앞에서 뒤로 검색됩니다.
+계산된 인덱스가 0보다 작으면 전체 배열이 검색됩니다.
+
+기본값 - 0 (전체 배열 검색)
+
+## problem (두 번째 인자)에 5가 들어가면
+배열의 길이와 같아서 -1이 돼서 안되는 거였음 ..
